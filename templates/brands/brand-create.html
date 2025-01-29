@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrum Market - Create Brand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="animate-fade-in">
+            <div class="header-content">
+                <a href="/" class="logo">Astrum Market</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="product-by-category.html">Products</a>
+                    <a href="product-create.html">Add Product</a>
+                    <a href="brand-create.html">Add Brand</a>
+                    <a href="category-create.html">Add Category</a>
+                    <a href="color-create.html">Add Color</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content-container animate-slide-up">
+                <h1 class="page-title">Create New Brand</h1>
+                <form id="brand-form" class="form">
+                    <div class="form-group">
+                        <label for="brand-name" class="form-label">Brand Name:</label>
+                        <input type="text" id="brand-name" name="brand-name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-description" class="form-label">Description:</label>
+                        <textarea id="brand-description" name="brand-description" required class="form-input"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-logo" class="form-label">Brand Logo:</label>
+                        <input type="file" id="brand-logo" name="brand-logo" accept="image/*" required class="form-input">
+                    </div>
+                    <button type="submit" class="submit-button">Create Brand</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="animate-fade-in">
+            <p>&copy; 2023 Astrum Market. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

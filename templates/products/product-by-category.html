@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrum Market - Products by Category</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="animate-fade-in">
+            <div class="header-content">
+                <a href="/" class="logo">Astrum Market</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="product-by-category.html">Products</a>
+                    <a href="product-create.html">Add Product</a>
+                    <a href="brand-create.html">Add Brand</a>
+                    <a href="category-create.html">Add Category</a>
+                    <a href="color-create.html">Add Color</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="product-category-page">
+            <div class="content-container">
+                <h1 class="page-title">Products by Category</h1>
+                <div class="product-category-layout">
+                    <aside class="filters-sidebar animate-slide-up">
+                        <h2 class="filters-title">Filters</h2>
+                        <form id="filter-form" class="filters-form">
+                            <div class="filter-group">
+                                <h3 class="filter-subtitle">Brand</h3>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="apple">
+                                    <span class="checkmark"></span>
+                                    Apple
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="samsung">
+                                    <span class="checkmark"></span>
+                                    Samsung
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="sony">
+                                    <span class="checkmark"></span>
+                                    Sony
+                                </label>
+                            </div>
+                            <div class="filter-group">
+                                <h3 class="filter-subtitle">Color</h3>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="color" value="black">
+                                    <span class="checkmark"></span>
+                                    Black
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="color" value="white">
+                                    <span class="checkmark"></span>
+                                    White
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="color" value="blue">
+                                    <span class="checkmark"></span>
+                                    Blue
+                                </label>
+                            </div>
+                            <div class="filter-group">
+                                <h3 class="filter-subtitle">Price Range</h3>
+                                <div class="price-range-inputs">
+                                    <input type="number" name="min-price" placeholder="Min" class="form-input">
+                                    <input type="number" name="max-price" placeholder="Max" class="form-input">
+                                </div>
+                            </div>
+                            <button type="submit" class="filter-button">Apply Filters</button>
+                        </form>
+                    </aside>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <p class="product-count">Showing 6 products</p>
+                            <div class="sort-container">
+                                <label for="sort-select" class="sort-label">Sort by:</label>
+                                <select id="sort-select" class="sort-select">
+                                    <option value="price-asc">Price: Low to High</option>
+                                    <option value="price-desc">Price: High to Low</option>
+                                    <option value="name-asc">Name: A to Z</option>
+                                    <option value="name-desc">Name: Z to A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product-grid stagger-animation">
+                            <a href="product-detail.html?id=1" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Wireless Headphones">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Wireless Headphones</h3>
+                                    <p class="product-price">$129.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                            <a href="product-detail.html?id=2" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Smart Watch">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Smart Watch</h3>
+                                    <p class="product-price">$199.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                            <a href="product-detail.html?id=3" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Smart Speaker">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Smart Speaker</h3>
+                                    <p class="product-price">$79.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                            <a href="product-detail.html?id=4" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Wireless Earbuds">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Wireless Earbuds</h3>
+                                    <p class="product-price">$89.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                            <a href="product-detail.html?id=5" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Smartphone">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Smartphone</h3>
+                                    <p class="product-price">$699.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                            <a href="product-detail.html?id=6" class="product-card animate-scale-up">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=200" alt="Laptop">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Laptop</h3>
+                                    <p class="product-price">$1299.99</p>
+                                    <span class="view-details">View Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="animate-fade-in">
+            <p>&copy; 2023 Astrum Market. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
