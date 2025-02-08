@@ -1,57 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrum Market - Create Category</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="wrapper">
-        <header class="animate-fade-in">
-            <div class="header-content">
-                <a href="/" class="logo">Astrum Market</a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="product-by-category.html">Products</a>
-                    <a href="product-create.html">Add Product</a>
-                    <a href="brand-create.html">Add Brand</a>
-                    <a href="category-create.html">Add Category</a>
-                    <a href="color-create.html">Add Color</a>
-                </nav>
-            </div>
-        </header>
+{% extends "base.html" %}
 
-        <main>
-            <div class="content-container animate-slide-up">
-                <h1 class="page-title">Create New Category</h1>
-                <form id="category-form" class="form">
-                    <div class="form-group">
-                        <label for="category-name" class="form-label">Category Name:</label>
-                        <input type="text" id="category-name" name="category-name" required class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="category-description" class="form-label">Description:</label>
-                        <textarea id="category-description" name="category-description" required class="form-input"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="parent-category" class="form-label">Parent Category (optional):</label>
-                        <select id="parent-category" name="parent-category" class="form-input">
-                            <option value="">None</option>
-                            <option value="category1">Electronics</option>
-                            <option value="category2">Clothing</option>
-                            <option value="category3">Home & Garden</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-button">Create Category</button>
-                </form>
-            </div>
-        </main>
+{% block title %}Create Category - Astrum Market{% endblock %}
 
-        <footer class="animate-fade-in">
-            <p>&copy; 2023 Astrum Market. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
+{% block content %}
+<div class="content-container animate-slide-up">
+    <h1 class="page-title">Create New Category</h1>
+    <form id="category-form" class="form" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="id_name" class="form-label">Category Name:</label>
+            <input type="text" id="id_name" name="name" required class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="id_description" class="form-label">Description:</label>
+            <textarea id="id_description" name="description" required class="form-input"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="id_parent" class="form-label">Parent Category (optional):</label>
+            <select id="id_parent" name="parent" class="form-input">
+                <option value="">None</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="submit-button">Create Category</button>
+    </form>
+</div>
+{% endblock %}

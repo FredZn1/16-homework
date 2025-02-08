@@ -9,4 +9,4 @@ def create_color(request):
         color = Color(name=name, hex_code=hex_code)
         color.save()
         return redirect('home')
-    return render(request, 'colors/color_create.html')
+    return render(request, 'colors/color-create.html')

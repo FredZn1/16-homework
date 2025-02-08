@@ -9,4 +9,4 @@ def create_category(request):
         category = Category(name=name, description=description)
         category.save()
         return redirect('home')
-    return render(request, 'categories/category_create.html')
+    return render(request, 'catalogs/category-create.html')

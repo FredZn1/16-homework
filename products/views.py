@@ -5,7 +5,7 @@ from catalogs.models import Category
 from colors.models import Color
 
 def home(request):
-    selected_categories = None
+    selected_catalogs = None
     products = Product.objects.all()
     catalogs = Category.objects.all()
     category = request.GET.get('category')
@@ -100,11 +100,11 @@ def create_product(request):
         'catalogs': catalogs,
         'colors': colors
     }
-    return render(request, 'products/product_create.html', ctx)
+    return render(request, 'products/product-create.html', ctx)
 
 
 def product_detail(request, year, month, day, slug):
     product = get_object_or_404(Product, slug=slug, created_at__year=year, created_at__month=month, created_at__day=day)
     ctx = {'product': product}
-    return render(request, 'products/product_detail.html', ctx)
+    return render(request, 'products/product-detail.html', ctx)
 
